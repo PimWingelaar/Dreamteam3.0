@@ -7,7 +7,7 @@ namespace Boek
 {
     public class Boek : Product
     {
-        private int isbn;
+        private string isbn;
         private int minimum;
         private int maximaal;
         private int aantalvoorraad;

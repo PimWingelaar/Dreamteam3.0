@@ -3,36 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Boek
+namespace BoekLibary
 {
     public class Afmeting
     {
-        private int breedte;
-        private int hoogte;
-        private int lengte;
+        private int _breedte;
+        private int _hoogte;
+        private int _lengte;
 
-        public int Lengte
+        public Afmeting()
         {
-            get => default(int);
-            set
-            {
-            }
         }
 
-        public int Breedte
+        public Afmeting(int breedte, int hoogte, int lengte)
         {
-            get => default(int);
-            set
-            {
-            }
+            _breedte = breedte;
+            _hoogte = hoogte;
+            _lengte = lengte;
         }
 
-        public int Hoogte
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
+        public int Breedte { get => _breedte; set => _breedte = value; }
+        public int Hoogte { get => _hoogte; set => _hoogte = value; }
+        public int Lengte { get => _lengte; set => _lengte = value; }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Boek
+namespace BoekLibary
 {
     public class Tijdschrijft : Product
     {
@@ -12,9 +12,12 @@ namespace Boek
         private int issn;
         private int bestelaantal;
 
-        public Tijdschrijft()
+        public Tijdschrijft(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen, int uitgiftedag, int besteldag, int issn, int bestelaantal) : base(titel, auteur, taal, gewicht, prijs, afmetingen)
         {
-            throw new System.NotImplementedException();
+            this.uitgiftedag = uitgiftedag;
+            this.besteldag = besteldag;
+            this.issn = issn;
+            this.bestelaantal = bestelaantal;
         }
 
         public int Bestelaantal

@@ -14,6 +14,8 @@ namespace BoekLibary
         private int _gewicht;
         private double _prijs;
         private Afmeting _afmetingen;
+        public static List<Boek> Boekenlijst;
+        public static List<Tijdschrijft> Tijdschriftenlijst;
 
         internal Product(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen)
         {
@@ -23,6 +25,8 @@ namespace BoekLibary
             Gewicht = gewicht;
             Prijs = prijs;
             Afmetingen = afmetingen;
+            Boekenlijst = new List<Boek>();
+            Tijdschriftenlijst = new List<Tijdschrijft>();
         }
 
         public string Titel { get => _titel; set => _titel = value; }

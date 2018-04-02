@@ -39,28 +39,72 @@ namespace BoekLibary
 
         public static void NieuwBoek(Boek _objboek)
         {
-            
+            try
+            {
+                Product.Boekenlijst.Add(_objboek);
+            }
+            catch (NullReferenceException)
+            {
+                Console.WriteLine(@"No data found in the object Boek.");
+            }
         }
 
-        public static void NieuwTijdschift()
+        public static void VerwijderBoek(Boek _objboek)
+        {
+            if (Product.Boekenlijst.Contains(_objboek))
+            {
+                Product.Boekenlijst.Remove(_objboek);
+            }
+            else
+            {
+                Console.WriteLine(@"No data found that is similiar to objboek");
+            }
+        }
+
+        public static void NieuwTijdschrift()
         {
 
         }
 
-        public static void NieuwTijdschift(Tijdschrijft _objtijdschrift)
+        public static void NieuwTijdschrift(Tijdschrijft _objtijdschrift)
         {
+            try
+            {
+                Product.Tijdschriftenlijst.Add(_objtijdschrift);
+            }
+            catch (NullReferenceException)
+            {
+                Console.WriteLine(@"No data found in the object Tijdschrift.");
+            }
+        }
 
+        public static void VerwijderTijdschrift(Tijdschrijft _objtijdschrijft)
+        {
+            if (Product.Tijdschriftenlijst.Contains(_objtijdschrijft))
+            {
+                Product.Tijdschriftenlijst.Remove(_objtijdschrijft);
+            }
+            else
+            {
+                Console.WriteLine(@"No data found that is similiar to objboek");
+            }
         }
 
         public static string ToonAlleTijdschriften()
         {
-            return "";
+            int lijst = 0;
+            foreach (var _ in Product.Tijdschriftenlijst)
+            {
+                lijst++;
+            }
+
+            return lijst.ToString();
         }
 
         public static string ToonAlleBoeken()
         {
             int lijst = 0;
-            foreach (var _ in Boek.Boekenlijst)
+            foreach (var _ in Product.Boekenlijst)
             {
                 lijst++;
             }

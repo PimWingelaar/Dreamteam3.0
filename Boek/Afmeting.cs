@@ -11,10 +11,9 @@
         public int Breedte { get => _breedte; set => _breedte = value; }
         public int Hoogte { get => _hoogte; set => _hoogte = value; }
         public int Lengte { get => _lengte; set => _lengte = value; }
-		#endregion
+        #endregion
 
-
-		#region Constructors
+        #region Constructors
         public Afmeting()
         {
         }

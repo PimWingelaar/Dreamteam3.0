@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="BoekLibary.Afmeting">
-    <Position X="13" Y="2.5" Width="1.5" />
+    <Position X="3.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAQAAQABAAAAAAIAAQAAAAABAAAA=</HashCode>
       <FileName>Afmeting.cs</FileName>
@@ -15,14 +15,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="BoekLibary.Bestellingen">
-    <Position X="12.75" Y="5.75" Width="1.5" />
+    <Position X="8.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAQAAAAAAAAEEEAAgAAAAAAAAAAAAAA=</HashCode>
       <FileName>Bestellingen.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BoekLibary.Boek">
-    <Position X="8.25" Y="3.75" Width="1.5" />
+    <Position X="4.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAAAACAASAAAAACAAAAIAAAEAAAAAAABgAQABAAAAA=</HashCode>
       <FileName>Boek.cs</FileName>
@@ -38,19 +38,22 @@
   <Class Name="BoekLibary.Product">
     <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAABAEACAABUAAAAAAEgAAAAAAAIAAAAAAGAAAQAAA=</HashCode>
+      <HashCode>CAAABAMACAABUAAAAAAEgAAAAAAAIAAAAAAGAAAQAAA=</HashCode>
       <FileName>Product.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Afmeting" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="BoekLibary.Tijdschrift">
-    <Position X="10.5" Y="3.75" Width="1.5" />
+    <Position X="7.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAAQAAACAAAABAACIAAAAAAAgAAAAAABAAAAg=</HashCode>
       <FileName>Tijdschrift.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="BoekLibary.Enum_taal">
-    <Position X="18.5" Y="2.75" Width="1.5" />
+    <Position X="1" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAgQAAAAAAAQAAEAAAAAAAAAA=</HashCode>
       <FileName>Enum_taal.cs</FileName>

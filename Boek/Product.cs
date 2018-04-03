@@ -20,10 +20,18 @@ namespace BoekLibary
         public int Gewicht { get => _gewicht; set => _gewicht = value; }
         public double Prijs { get => _prijs; set => _prijs = value; }
         public Afmeting Afmetingen { get => _afmetingen; set => _afmetingen = value; }
-		#endregion
 
-		#region Constructor
-		internal Product(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen)
+        public Afmeting Afmeting
+        {
+            get => default(Afmeting);
+            set
+            {
+            }
+        }
+        #endregion
+
+        #region Constructor
+        internal Product(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen)
         {
             Titel = titel;
             Auteur = auteur;

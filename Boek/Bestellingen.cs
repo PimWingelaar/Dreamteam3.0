@@ -5,17 +5,22 @@ namespace BoekLibary
 {
     public class Bestellingen
     {
-        private string _besteldetails;
+		#region Variables
+		private string _besteldetails;
         public static List<Bestellingdetails> Bestelling;
 
         public string Besteldetails { get => _besteldetails; set => _besteldetails = value; }
+		#endregion
 
-        public Bestellingen()
+		#region Constructor
+		public Bestellingen()
         {
             Bestelling = new List<Bestellingdetails>();
         }
+		#endregion
 
-        public void Toevoegen(string _order)
+		#region methods
+		public void Toevoegen(string _order)
         {
             throw new NotImplementedException();
         }
@@ -32,5 +37,6 @@ namespace BoekLibary
         {
             throw new NotImplementedException();
         }
-    }
+		#endregion
+	}
 }

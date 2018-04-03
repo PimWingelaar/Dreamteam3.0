@@ -5,7 +5,9 @@ namespace BoekLibary
 {
     public class Boek : Product
     {
-        private string _isbn;
+
+		#region Variables
+		private string _isbn;
         private int _minimum;
         private int _maximaal;
         private int _voorraad;
@@ -16,8 +18,10 @@ namespace BoekLibary
         public int Maximaal { get => _maximaal; set => _maximaal = value; }
         public int Voorraad { get => _voorraad; set => _voorraad = value; }
         public string Druk { get => _druk; set => _druk = value; }
+		#endregion
 
-        public Boek(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen, string isbn, int minimum, int maximaal, int voorraad, string druk) : base(titel, auteur, taal, gewicht, prijs, afmetingen)
+		#region Constructor
+		public Boek(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen, string isbn, int minimum, int maximaal, int voorraad, string druk) : base(titel, auteur, taal, gewicht, prijs, afmetingen)
         {
             _isbn = isbn;
             _minimum = minimum;
@@ -25,8 +29,10 @@ namespace BoekLibary
             _voorraad = voorraad;
             _druk = druk;
         }
+		#endregion
 
-        public string Afdrukken()
+		#region Method
+		public string Afdrukken()
         {
             var stringbuilder = new StringBuilder()
                 .Append("Titel: ")
@@ -57,5 +63,6 @@ namespace BoekLibary
 
             return stringbuilder.ToString();
         }
-    }
+		#endregion
+	}
 }

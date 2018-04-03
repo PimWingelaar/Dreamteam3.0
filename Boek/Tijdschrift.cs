@@ -7,7 +7,8 @@ namespace BoekLibary
 {
     public class Tijdschrift : Product
     {
-        private int _uitgiftedag;
+		#region Variables
+		private int _uitgiftedag;
         private int _besteldag;
         private int _issn;
         private int _bestelaantal;
@@ -16,15 +17,20 @@ namespace BoekLibary
         public int Besteldag { get => _besteldag; set => _besteldag = value; }
         public int ISSN { get => _issn; set => _issn = value; }
         public int Bestelaantal { get => _bestelaantal; set => _bestelaantal = value; }
+		#endregion
 
-        public Tijdschrift(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen, int uitgiftedag, int besteldag, int issn, int bestelaantal) : base(titel, auteur, taal, gewicht, prijs, afmetingen)
+		#region Constructor
+		public Tijdschrift(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen, int uitgiftedag, int besteldag, int issn, int bestelaantal) : base(titel, auteur, taal, gewicht, prijs, afmetingen)
         {
             _uitgiftedag = uitgiftedag;
             _besteldag = besteldag;
             _issn = issn;
             _bestelaantal = bestelaantal;
         }
-        public string Afdrukken()
+		#endregion
+
+		#region method
+		public string Afdrukken()
         {
             var stringbuilder = new StringBuilder()
                 .Append("Titel: ")
@@ -52,5 +58,6 @@ namespace BoekLibary
             
             return stringbuilder.ToString();
         }
-    }
+		#endregion
+	}
 }

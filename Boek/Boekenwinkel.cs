@@ -5,18 +5,24 @@ namespace BoekLibary
 {
     public class Boekenwinkel
     {
-        private string _contactgegevens;
+
+		#region Variables
+		private string _contactgegevens;
         private string _openingstijden;
         private List<Product> _voorraad;
+		#endregion
 
-        public Boekenwinkel(string contactgegevens, string openingstijden, List<Product> voorraad)
+		#region Constructor
+		public Boekenwinkel(string contactgegevens, string openingstijden, List<Product> voorraad)
         {
             _contactgegevens = contactgegevens;
             _openingstijden = openingstijden;
             _voorraad = voorraad;
         }
+		#endregion
 
-        public static string GenereerOrder()
+		#region methods
+		public static string GenereerOrder()
         {
             return "";  
         }
@@ -146,5 +152,6 @@ namespace BoekLibary
         {
             
         }
-    }
+		#endregion
+	}
 }

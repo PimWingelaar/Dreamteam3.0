@@ -2,23 +2,28 @@
 
 namespace BoekLibary
 {
-    public class Bestellingdetails
+	public class Bestellingdetails
     {
-        private int _besteldatum;
+
+		#region Variables
+		private int _besteldatum;
         private int _opsomming;
         private int _afgehandeld;
 
         public int Besteldatum { get => _besteldatum; set => _besteldatum = value; }
         public int Opsomming { get => _opsomming; set => _opsomming = value; }
         public int Afgehandeld { get => _afgehandeld; set => _afgehandeld = value; }
+		#endregion
 
-
-        public Bestellingdetails()
+		#region Constructor
+		public Bestellingdetails()
         {
             throw new NotImplementedException();
         }
+		#endregion
 
-        public void Toevoegen(string _order)
+		#region Methods
+		public void Toevoegen(string _order)
         {
             throw new NotImplementedException();
         }
@@ -30,5 +35,7 @@ namespace BoekLibary
         {
             throw new NotImplementedException();
         }
-    }
+		#endregion
+	
+	}
 }

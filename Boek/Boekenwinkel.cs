@@ -44,7 +44,7 @@ namespace BoekLibary
             }
             catch
             {
-
+                Console.WriteLine("You have to enter data in the lines.");
             }
         }
 

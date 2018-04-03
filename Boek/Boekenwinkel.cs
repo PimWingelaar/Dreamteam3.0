@@ -34,16 +34,18 @@ namespace BoekLibary
                 if (boek.ISBN == _isbn)
                 {
                     boek.Voorraad -= _aantal;
-                    if (boek.Voorraad <= boek.Minimum)
-                    {
-
-                    }
                 }
             }
         }
-        public static string VerkoopTijdschrift(string _ISSN, int _aantal)
+        public static void VerkoopTijdschrift(string _issn, int _aantal)
         {
-            return "";
+            foreach (Tijdschrift tijdschrift in Product.Tijdschriftenlijst)
+            {
+                if (tijdschrift.ISSN == Convert.ToInt32(_issn))
+                {
+                    tijdschrift.Bestelaantal -= _aantal;
+                }
+            }
         }
 
         public static void NieuwBoek(string _titel, string _auteur, Enum_taal _taal, int _gewicht, double _prijs, int _lengte,

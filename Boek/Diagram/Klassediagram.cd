@@ -1,65 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Boek.Boek">
-    <Position X="3.25" Y="0.5" Width="1.5" />
+  <Class Name="BoekLibary.Afmeting">
+    <Position X="13" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAIAAAIAgAAgAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Boek.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Boek.Boekenwinkel">
-    <Position X="6.75" Y="5.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAABGAAAAAAAAABAAABAAAAAQAAAgEAA=</HashCode>
-      <FileName>Boekenwinkel.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="voorraad" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="Boek.Bestellingen">
-    <Position X="10" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAEA=</HashCode>
-      <FileName>Bestellingen.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Bestellingdetails" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="Boek.Tijdschrijft">
-    <Position X="5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAgAhAAIAAAAgAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Tijdschrijft.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Boek.Bestellingdetails">
-    <Position X="7" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>QAACAAAAAAAAAAAAAAAAFACAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Bestellingdetails.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Product1" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="Boek.Product">
-    <Position X="4" Y="4" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAABAIAAAQAAAAAAAAAAAAgAAAAIAAAABAGAAAQBgA=</HashCode>
-      <FileName>Product.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Afmeting" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="Boek.Afmeting">
-    <Position X="1.25" Y="4" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAABAAAAAUAAAABAAABAAAAAQAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAQABAAAAAAIAAQAAAAABAAAA=</HashCode>
       <FileName>Afmeting.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="BoekLibary.Bestellingdetails">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAAAAAAAEAIAAAAIBAAAAgAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Bestellingdetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoekLibary.Bestellingen">
+    <Position X="12.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAQAAAAAAAAEEEAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bestellingen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoekLibary.Boek">
+    <Position X="8.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAACAASAAAAACAAAAIAAAEAAAAAAABgAQABAAAAA=</HashCode>
+      <FileName>Boek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoekLibary.Boekenwinkel">
+    <Position X="16.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAARACEAAAQCAAAABAAABIEAAAAAAAiAAAAAAAAAA=</HashCode>
+      <FileName>Boekenwinkel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoekLibary.Product">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAABAEACAABUAAAAAAEgAAAAAAAIAAAAAAGAAAQAAA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoekLibary.Tijdschrift">
+    <Position X="10.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAQAAACAAAABAACIAAAAAAAgAAAAAABAAAAg=</HashCode>
+      <FileName>Tijdschrift.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="BoekLibary.Enum_taal">
+    <Position X="18.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgQAAAAAAAQAAEAAAAAAAAAA=</HashCode>
+      <FileName>Enum_taal.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -48,7 +48,7 @@
     <Compile Include="Enum_taal.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tijdschrijft.cs" />
+    <Compile Include="Tijdschrift.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Diagram\Klassediagram.cd" />

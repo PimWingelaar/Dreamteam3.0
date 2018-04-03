@@ -77,7 +77,7 @@ namespace BoekLibary
             try
             {
                 var _afmeting = new Afmeting(_breedte, _hoogte, _lengte);
-                var _tijdschrijft = new Tijdschrijft(_titel, _auteur, _taal, _gewicht, _prijs, _afmeting, _uitgiftedag,
+                var _tijdschrijft = new Tijdschrift(_titel, _auteur, _taal, _gewicht, _prijs, _afmeting, _uitgiftedag,
                     _besteldag, _issn, _bestelaantal);
                 Product.Tijdschriftenlijst.Add(_tijdschrijft);
             }
@@ -87,7 +87,7 @@ namespace BoekLibary
             }
         }
 
-        public static void NieuwTijdschrift(Tijdschrijft _objtijdschrift)
+        public static void NieuwTijdschrift(Tijdschrift _objtijdschrift)
         {
             try
             {
@@ -99,7 +99,7 @@ namespace BoekLibary
             }
         }
 
-        public static void VerwijderTijdschrift(Tijdschrijft _objtijdschrijft)
+        public static void VerwijderTijdschrift(Tijdschrift _objtijdschrijft)
         {
             if (Product.Tijdschriftenlijst.Contains(_objtijdschrijft))
             {

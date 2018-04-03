@@ -5,14 +5,14 @@ using System.Text;
 
 namespace BoekLibary
 {
-    public class Tijdschrijft : Product
+    public class Tijdschrift : Product
     {
         private int uitgiftedag;
         private int besteldag;
         private int issn;
         private int bestelaantal;
 
-        public Tijdschrijft(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen, int uitgiftedag, int besteldag, int issn, int bestelaantal) : base(titel, auteur, taal, gewicht, prijs, afmetingen)
+        public Tijdschrift(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen, int uitgiftedag, int besteldag, int issn, int bestelaantal) : base(titel, auteur, taal, gewicht, prijs, afmetingen)
         {
             this.uitgiftedag = uitgiftedag;
             this.besteldag = besteldag;

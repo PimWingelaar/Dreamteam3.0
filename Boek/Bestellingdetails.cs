@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace BoekLibary
 {
@@ -21,15 +18,17 @@ namespace BoekLibary
         public int Afgehandeld { get => _afgehandeld; set => _afgehandeld = value; }
 
 
-        public void Toevoegen(string _order) 
+        public void Toevoegen(string _order)
         {
+            throw new NotImplementedException();
         }
         public void Verwijderen(int index)
         {
+            throw new NotImplementedException();
         }
         public void Verwijderen(string _order)
         {
-
+            throw new NotImplementedException();
         }
     }
 }

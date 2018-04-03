@@ -20,7 +20,7 @@ namespace BoekLibary
             _druk = druk;
         }
 
-        public string Isbn { get => _isbn; set => _isbn = value; }
+        public string ISBN { get => _isbn; set => _isbn = value; }
         public int Minimum { get => _minimum; set => _minimum = value; }
         public int Maximaal { get => _maximaal; set => _maximaal = value; }
         public int Aantalvoorraad { get => _aantalvoorraad; set => _aantalvoorraad = value; }
@@ -35,12 +35,16 @@ namespace BoekLibary
                 .Append(Auteur)
                 .Append(" Taal: ")
                 .Append(Taal)
-                .Append(" Afmeting ")
+                .Append(" Gewicht: ")
+                .Append(Gewicht)
+                .Append(" Prijs: ")
+                .Append(Prijs)
+                .Append(" Afmeting: ")
                 .Append(Afmetingen.Breedte)
                 .Append("x" + Afmetingen.Lengte)
                 .Append("x" + Afmetingen.Hoogte)
-                .Append(" ISBN ")
-                .Append(Isbn)
+                .Append(" ISBN: ")
+                .Append(ISBN)
                 .Append(" Minimum: ")
                 .Append(Minimum)
                 .Append(" Maximaal: ")

@@ -22,6 +22,8 @@ namespace BoekenWinkel
             var testtijdschrift2 = new Tijdschrift("vtwonen", "ruben gijsbert", Enum_taal.Nederlands, 145, 5.50, testAfmeting, 17-02-2018, 18-02-2018, 98654879, 250);
             var testtijdschrift3 = new Tijdschrift("autoweek", "frits huizen", Enum_taal.Nederlands, 135, 4.50, testAfmeting, 15-02-2018, 16-02-2018, 46987614, 240);
 
+            var testy = testBoek.Titel;
+
             Boekenwinkel.NieuwBoek(testBoek);
             Boekenwinkel.NieuwBoek(testBoek);
 

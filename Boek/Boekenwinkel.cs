@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace BoekLibary
 {
@@ -25,7 +23,22 @@ namespace BoekLibary
 
         public static string VerkoopBoek(string _ISBN, int _aantal)
         {
-            return "";
+            int i = 0;
+            try
+            {
+                foreach (var boek in Product.Boekenlijst)
+                {
+                    if(boek.ISBN == _ISBN)
+                    {
+                        Product.Boekenlijst.Find(x => x
+                    }
+                    i++;
+                }
+            }
+            catch
+            {
+
+            }
         }
         public static string VerkoopTijdschrift(string _ISSN, int _aantal)
         {

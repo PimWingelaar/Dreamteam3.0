@@ -11,6 +11,12 @@ namespace BoekLibary
         private int _voorraad;
         private string _druk;
 
+        public string ISBN { get => _isbn; set => _isbn = value; }
+        public int Minimum { get => _minimum; set => _minimum = value; }
+        public int Maximaal { get => _maximaal; set => _maximaal = value; }
+        public int Voorraad { get => _voorraad; set => _voorraad = value; }
+        public string Druk { get => _druk; set => _druk = value; }
+
         public Boek(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen, string isbn, int minimum, int maximaal, int voorraad, string druk) : base(titel, auteur, taal, gewicht, prijs, afmetingen)
         {
             _isbn = isbn;
@@ -19,12 +25,6 @@ namespace BoekLibary
             _voorraad = voorraad;
             _druk = druk;
         }
-
-        public string ISBN { get => _isbn; set => _isbn = value; }
-        public int Minimum { get => _minimum; set => _minimum = value; }
-        public int Maximaal { get => _maximaal; set => _maximaal = value; }
-        public int Voorraad { get => _voorraad; set => _voorraad = value; }
-        public string Druk { get => _druk; set => _druk = value; }
 
         public string Afdrukken()
         {

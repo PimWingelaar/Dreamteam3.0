@@ -6,6 +6,10 @@
         private int _hoogte;
         private int _lengte;
 
+        public int Breedte { get => _breedte; set => _breedte = value; }
+        public int Hoogte { get => _hoogte; set => _hoogte = value; }
+        public int Lengte { get => _lengte; set => _lengte = value; }
+
         public Afmeting()
         {
         }
@@ -16,9 +20,5 @@
             _hoogte = hoogte;
             _lengte = lengte;
         }
-
-        public int Breedte { get => _breedte; set => _breedte = value; }
-        public int Hoogte { get => _hoogte; set => _hoogte = value; }
-        public int Lengte { get => _lengte; set => _lengte = value; }
     }
 }

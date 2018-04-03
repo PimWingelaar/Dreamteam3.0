@@ -8,15 +8,15 @@ namespace BoekLibary
         private int _opsomming;
         private int _afgehandeld;
 
-        public Bestellingdetails()
-        {
-            throw new NotImplementedException();
-        }
-
         public int Besteldatum { get => _besteldatum; set => _besteldatum = value; }
         public int Opsomming { get => _opsomming; set => _opsomming = value; }
         public int Afgehandeld { get => _afgehandeld; set => _afgehandeld = value; }
 
+
+        public Bestellingdetails()
+        {
+            throw new NotImplementedException();
+        }
 
         public void Toevoegen(string _order)
         {

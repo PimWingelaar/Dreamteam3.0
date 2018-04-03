@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 
 namespace BoekLibary
 {
@@ -24,5 +25,33 @@ namespace BoekLibary
         public int Maximaal { get => _maximaal; set => _maximaal = value; }
         public int Aantalvoorraad { get => _aantalvoorraad; set => _aantalvoorraad = value; }
         public string Druk { get => _druk; set => _druk = value; }
+
+        public string Afdrukken()
+        {
+            var stringbuilder = new StringBuilder()
+                .Append("Titel: ")
+                .Append(Titel)
+                .Append(" Auteur: ")
+                .Append(Auteur)
+                .Append(" Taal: ")
+                .Append(Taal)
+                .Append(" Afmeting ")
+                .Append(Afmetingen.Breedte)
+                .Append("x" + Afmetingen.Lengte)
+                .Append("x" + Afmetingen.Hoogte)
+                .Append(" ISBN ")
+                .Append(Isbn)
+                .Append(" Minimum: ")
+                .Append(Minimum)
+                .Append(" Maximaal: ")
+                .Append(Maximaal)
+                .Append(" Aantalvoorraad: ")
+                .Append(Aantalvoorraad)
+                .Append(" Druk: ")
+                .Append(Druk);
+
+
+            return stringbuilder.ToString();
+        }
     }
 }

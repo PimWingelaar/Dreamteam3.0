@@ -32,9 +32,20 @@ namespace BoekLibary
             return "";
         }
 
-        public static void NieuwBoek()
+        public static void NieuwBoek(string _titel, string _auteur, Enum_taal _taal, int _gewicht, double _prijs, int _lengte,
+            int _hoogte, int _breedte, string _isbn, int _minimum, int _maximaal, int _aantalvoorraad, string _druk)
         {
-            
+            try
+            {
+                var _afmeting = new Afmeting(_breedte, _hoogte, _lengte);
+                var _boek = new Boek(_titel, _auteur, _taal, _gewicht, _prijs, _afmeting, _isbn,
+                    _minimum, _maximaal, _aantalvoorraad, _druk);
+                Product.Boekenlijst.Add(_boek);
+            }
+            catch
+            {
+
+            }
         }
 
         public static void NieuwBoek(Boek _objboek)
@@ -61,9 +72,19 @@ namespace BoekLibary
             }
         }
 
-        public static void NieuwTijdschrift()
+        public static void NieuwTijdschrift(string _titel, string _auteur, Enum_taal _taal, int _gewicht, double _prijs, int _lengte, int _breedte, int _hoogte, int _uitgiftedag, int _besteldag, int _issn, int _bestelaantal)
         {
-
+            try
+            {
+                var _afmeting = new Afmeting(_breedte, _hoogte, _lengte);
+                var _tijdschrijft = new Tijdschrijft(_titel, _auteur, _taal, _gewicht, _prijs, _afmeting, _uitgiftedag,
+                    _besteldag, _issn, _bestelaantal);
+                Product.Tijdschriftenlijst.Add(_tijdschrijft);
+            }
+            catch
+            {
+                Console.WriteLine("You have to enter data in the lines.");
+            }
         }
 
         public static void NieuwTijdschrift(Tijdschrijft _objtijdschrift)

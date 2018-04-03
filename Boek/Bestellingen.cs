@@ -5,31 +5,32 @@ namespace BoekLibary
 {
     public class Bestellingen
     {
-        private List<Bestellingdetails> _bestelling;
         private string _besteldetails;
+        public static List<Bestellingdetails> Bestelling;
 
-        public List<Bestellingdetails> Bestelling { get => _bestelling; set => _bestelling = value; }
         public string Besteldetails { get => _besteldetails; set => _besteldetails = value; }
 
         public Bestellingen()
         {
-            throw new System.NotImplementedException();
+            Bestelling = new List<Bestellingdetails>();
         }
 
         public void Toevoegen(string _order)
         {
+            throw new NotImplementedException();
         }
         public void Verwijderen(int index)
         {
+            throw new NotImplementedException();
         }
         public void Verwijderen(string _order)
         {
-
+            throw new NotImplementedException();
         }
 
         public string PrintOrderOpDatum(DateTime _datum)
         {
-            return null;
+            throw new NotImplementedException();
         }
     }
 }

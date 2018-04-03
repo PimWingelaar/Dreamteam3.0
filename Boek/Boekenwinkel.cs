@@ -21,23 +21,18 @@ namespace BoekLibary
             return "";
         }
 
-        public static string VerkoopBoek(string _ISBN, int _aantal)
+        public static void VerkoopBoek(string _isbn, int _aantal)
         {
-            int i = 0;
-            try
+            foreach (Boek boek in Product.Boekenlijst)
             {
-                foreach (var boek in Product.Boekenlijst)
+                if (boek.ISBN == _isbn)
                 {
-                    if(boek.ISBN == _ISBN)
+                    boek.Voorraad -= _aantal;
+                    if (boek.Voorraad <= boek.Minimum)
                     {
-                        Product.Boekenlijst.Find(x => x
-                    }
-                    i++;
-                }
-            }
-            catch
-            {
 
+                    }
+                }
             }
         }
         public static string VerkoopTijdschrift(string _ISSN, int _aantal)
@@ -138,9 +133,10 @@ namespace BoekLibary
         public static string ToonAlleBoeken()
         {
             int lijst = 0;
-            foreach (var _ in Product.Boekenlijst)
+            foreach (var boek in Product.Boekenlijst)
             {
-                lijst++;
+                string test = boek.Afdrukken();
+                Console.WriteLine(test);
             }
 
             return lijst.ToString();

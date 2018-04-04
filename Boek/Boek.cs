@@ -7,27 +7,30 @@ namespace BoekLibary
     {
 
 		#region Variables
-		private string _isbn;
+		private long _isbn;
         private int _minimum;
         private int _maximaal;
         private int _voorraad;
         private string _druk;
-
-        public string ISBN { get => _isbn; set => _isbn = value; }
+        private int _boekenwinkelid;
+            
+        public long ISBN { get => _isbn; set => _isbn = value; }
         public int Minimum { get => _minimum; set => _minimum = value; }
         public int Maximaal { get => _maximaal; set => _maximaal = value; }
         public int Voorraad { get => _voorraad; set => _voorraad = value; }
         public string Druk { get => _druk; set => _druk = value; }
+        public int Boekenwinkelid{ get => _boekenwinkelid; set => _boekenwinkelid = value; }
 		#endregion
 
 		#region Constructor
-		public Boek(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen, string isbn, int minimum, int maximaal, int voorraad, string druk) : base(titel, auteur, taal, gewicht, prijs, afmetingen)
+		public Boek(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen, long isbn, int minimum, int maximaal, int voorraad, string druk, int boekenwinkelid) : base(titel, auteur, taal, gewicht, prijs, afmetingen)
         {
             _isbn = isbn;
             _minimum = minimum;
             _maximaal = maximaal;
             _voorraad = voorraad;
             _druk = druk;
+            _boekenwinkelid = boekenwinkelid;
         }
 		#endregion
 
@@ -58,7 +61,9 @@ namespace BoekLibary
                 .Append(" Voorraad: ")
                 .Append(Voorraad)
                 .Append(" Druk: ")
-                .Append(Druk);
+                .Append(Druk)
+                .Append(" Boekenwinkel: ")
+                .Append(Boekenwinkelid);
 
 
             return stringbuilder.ToString();

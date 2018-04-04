@@ -8,28 +8,31 @@ namespace BoekLibary
     public class Tijdschrift : Product
     {
 		#region Variables
-		private int _uitgiftedag;
-        private int _besteldag;
-        private int _issn;
+		private string _uitgiftedag;
+        private string _besteldag;
+        private long _issn;
         private int _bestelaantal;
+        private int _boekenwinkelid;
 
-        public int Uitgiftedag { get => _uitgiftedag; set => _uitgiftedag = value; }
-        public int Besteldag { get => _besteldag; set => _besteldag = value; }
-        public int ISSN { get => _issn; set => _issn = value; }
+        public string Uitgiftedag { get => _uitgiftedag; set => _uitgiftedag = value; }
+        public string Besteldag { get => _besteldag; set => _besteldag = value; }
+        public long ISSN { get => _issn; set => _issn = value; }
         public int Bestelaantal { get => _bestelaantal; set => _bestelaantal = value; }
-		#endregion
+        public int Boekenwinkelid { get => _boekenwinkelid; set => _boekenwinkelid = value; }
+        #endregion
 
-		#region Constructor
-		public Tijdschrift(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen, int uitgiftedag, int besteldag, int issn, int bestelaantal) : base(titel, auteur, taal, gewicht, prijs, afmetingen)
+        #region Constructor
+        public Tijdschrift(string titel, string auteur, Enum_taal taal, int gewicht, double prijs, Afmeting afmetingen, string uitgiftedag, string besteldag, long issn, int bestelaantal, int boekenwinkelid) : base(titel, auteur, taal, gewicht, prijs, afmetingen)
         {
             _uitgiftedag = uitgiftedag;
             _besteldag = besteldag;
             _issn = issn;
             _bestelaantal = bestelaantal;
+            _boekenwinkelid = boekenwinkelid;
         }
 		#endregion
 
-		#region method
+		#region Method
 		public string Afdrukken()
         {
             var stringbuilder = new StringBuilder()

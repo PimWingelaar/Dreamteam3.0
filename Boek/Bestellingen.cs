@@ -7,7 +7,7 @@ namespace BoekLibary
     {
 		#region Variables
 		private string _besteldetails;
-        public static List<Bestellingdetails> Bestelling;
+        public static List<Bestellingdetails> Bestellingdetailslist;
 
         public string Besteldetails { get => _besteldetails; set => _besteldetails = value; }
 		#endregion
@@ -15,7 +15,7 @@ namespace BoekLibary
 		#region Constructor
 		public Bestellingen()
         {
-            Bestelling = new List<Bestellingdetails>();
+            Bestellingdetailslist = new List<Bestellingdetails>();
         }
 		#endregion
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using BoekLibary;
 
 namespace BoekenWinkel
@@ -6,6 +7,29 @@ namespace BoekenWinkel
     internal class Program
     {
         static void Main(string[] args)
+        {
+            var quit = false;
+            Console.WriteLine("F2 TestMethode | F3 AddBook | F4 Stop");
+            while (!quit)
+            {
+                if (!Console.KeyAvailable) continue;
+                var key = Console.ReadKey(true);
+                switch (key.Key)
+                {
+                    case ConsoleKey.F2:
+                        TestMethode();
+                        break;
+                    case ConsoleKey.F3:
+                        BoekToevoegen();
+                        break;
+                    case ConsoleKey.F4:
+                        quit = true;
+                        break;
+                }
+            }
+        }
+
+        public static void TestMethode()
         {
             var testAfmeting = new Afmeting(5, 5, 5);
 
@@ -48,6 +72,72 @@ namespace BoekenWinkel
             test = Boekenwinkel.ToonAlleTijdschriften();
 
             Console.ReadLine();
+        }
+
+        public static void BoekToevoegen()
+        {
+            EnumTaal taal = 0;
+            string titel = null;
+            int boekenwinkel = 0;
+            try
+            {
+                Console.Clear();
+                Console.WriteLine("Wat is de titel");
+                titel = Console.ReadLine();
+                Console.WriteLine("Wat is de acteur");
+                string acteur = Console.ReadLine();
+                Console.WriteLine("Wat is de taal");
+                Console.WriteLine("0 = Nederlands");
+                Console.WriteLine("1 = Engels");
+                Console.WriteLine("2 = Frans");
+                Console.WriteLine("3 = Duits");
+                Console.WriteLine("");
+                var key = Console.ReadKey(true);
+                if (key.Key == ConsoleKey.NumPad0)
+                    taal = EnumTaal.Nederlands;
+                if (key.Key == ConsoleKey.NumPad1)
+                    taal = EnumTaal.Engels;
+                if (key.Key == ConsoleKey.NumPad2)
+                    taal = EnumTaal.Frans;
+                if (key.Key == ConsoleKey.NumPad3)
+                    taal = EnumTaal.Duits;
+                Console.WriteLine("");
+                Console.WriteLine("Wat is de gewicht");
+                int gewicht = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Wat is de prijs");
+                double prijs = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Wat is de lengte");
+                int lengte = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Wat is de breedte");
+                int breedte = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Wat is de hoogte");
+                int hoogte = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Wat is de ISBN");
+                long isbn = Convert.ToInt64(Console.ReadLine());
+                Console.WriteLine("Wat is de minimaal");
+                int minimaal = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Wat is de maximaal");
+                int maximaal = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Wat is de voorraad");
+                int voorraad = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Wat is de druk");
+                string druk = Console.ReadLine();
+                Console.WriteLine("Wat is de boekenwinkel");
+                boekenwinkel = Convert.ToInt32(Console.ReadLine());
+                Boekenwinkel.NieuwBoek(titel, acteur, taal, gewicht, prijs, lengte, hoogte, breedte, isbn, minimaal,
+                    maximaal, voorraad, druk, boekenwinkel);
+            }
+            catch
+            {
+                Console.WriteLine("Er is iets fout gegaan in het maken van het boek.");
+            }
+            Console.Clear();
+
+            Console.WriteLine($"Het boek {titel} is toegevoegd aan de boekenwinkel {boekenwinkel}");
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("F2 TestMethode | F3 AddBook | F4 Stop");
         }
     }
 }

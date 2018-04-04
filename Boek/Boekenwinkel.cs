@@ -25,9 +25,9 @@ namespace BoekLibary
         /// <summary>
         /// Initializes a new instance of the <see cref="Boekenwinkel"/> class.
         /// </summary>
-        /// <param name="boekenwinkelid">The boekenwinkelid.</param>
-        /// <param name="contactgegevens">The contactgegevens.</param>
-        /// <param name="openingstijden">The openingstijden.</param>
+        /// <param name="boekenwinkelid">het boekenwinkelid.</param>
+        /// <param name="contactgegevens">de contactgegevens.</param>
+        /// <param name="openingstijden">de openingstijden.</param>
         public Boekenwinkel(int boekenwinkelid, string contactgegevens, string openingstijden)
 		{
 		    _boekenwinkelid = boekenwinkelid;
@@ -77,20 +77,20 @@ namespace BoekLibary
         /// <summary>
         /// Nieuw boek toevoegen.
         /// </summary>
-        /// <param name="_titel">The titel.</param>
-        /// <param name="_auteur">The auteur.</param>
-        /// <param name="_taal">The taal.</param>
-        /// <param name="_gewicht">The gewicht.</param>
-        /// <param name="_prijs">The prijs.</param>
-        /// <param name="_lengte">The lengte.</param>
-        /// <param name="_hoogte">The hoogte.</param>
-        /// <param name="_breedte">The breedte.</param>
-        /// <param name="_isbn">The isbn.</param>
-        /// <param name="_minimum">The minimum.</param>
-        /// <param name="_maximaal">The maximaal.</param>
-        /// <param name="_aantalvoorraad">The aantalvoorraad.</param>
-        /// <param name="_druk">The druk.</param>
-        /// <param name="_boekenwinkelid">The boekenwinkelid.</param>
+        /// <param name="_titel">de titel.</param>
+        /// <param name="_auteur">de auteur.</param>
+        /// <param name="_taal">de taal.</param>
+        /// <param name="_gewicht">het gewicht.</param>
+        /// <param name="_prijs">de prijs.</param>
+        /// <param name="_lengte">de lengte.</param>
+        /// <param name="_hoogte">de hoogte.</param>
+        /// <param name="_breedte">de breedte.</param>
+        /// <param name="_isbn">hetisbn.</param>
+        /// <param name="_minimum">het minimum.</param>
+        /// <param name="_maximaal">het maximaal.</param>
+        /// <param name="_aantalvoorraad">de aantalvoorraad.</param>
+        /// <param name="_druk">de druk.</param>
+        /// <param name="_boekenwinkelid">de boekenwinkelid.</param>
         public static void NieuwBoek(string _titel, string _auteur, Enum_taal _taal, int _gewicht, double _prijs, int _lengte,
             int _hoogte, int _breedte, long _isbn, int _minimum, int _maximaal, int _aantalvoorraad, string _druk, int _boekenwinkelid)
         {
@@ -126,7 +126,7 @@ namespace BoekLibary
         /// <summary>
         /// Verwijdert het boek.
         /// </summary>
-        /// <param name="_objboek">The objboek.</param>
+        /// <param name="_objboek">het objboek.</param>
         public static void VerwijderBoek(Boek _objboek)
         {
             if (Product.Boekenlijst.Contains(_objboek))

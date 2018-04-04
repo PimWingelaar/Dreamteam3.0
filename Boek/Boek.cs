@@ -8,67 +8,67 @@ namespace BoekLibary
 
         #region Variables
         /// <summary>
-        /// The isbn
+        /// het isbn
         /// </summary>
         private long _isbn;
         /// <summary>
-        /// The minimum
+        /// het minimum
         /// </summary>
         private int _minimum;
         /// <summary>
-        /// The maximaal
+        /// het maximaal
         /// </summary>
         private int _maximaal;
         /// <summary>
-        /// The voorraad
+        /// de voorraad
         /// </summary>
         private int _voorraad;
         /// <summary>
-        /// The druk
+        /// de druk
         /// </summary>
         private string _druk;
         private int _boekenwinkelid;
 
         /// <summary>
-        /// Gets or sets the isbn.
+        /// Get of set het isbn.
         /// </summary>
         /// <value>
-        /// The isbn.
+        /// het isbn.
         /// </value>
         public long ISBN { get => _isbn; set => _isbn = value; }
         /// <summary>
-        /// Gets or sets the minimum.
+        /// Get of set het minimum.
         /// </summary>
         /// <value>
-        /// The minimum.
+        /// het minimum.
         /// </value>
         public int Minimum { get => _minimum; set => _minimum = value; }
         /// <summary>
-        /// Gets or sets the maximaal.
+        /// Get of set het maximaal.
         /// </summary>
         /// <value>
-        /// The maximaal.
+        /// het maximaal.
         /// </value>
         public int Maximaal { get => _maximaal; set => _maximaal = value; }
         /// <summary>
-        /// Gets or sets the voorraad.
+        /// Get of set de voorraad.
         /// </summary>
         /// <value>
-        /// The voorraad.
+        /// de voorraad.
         /// </value>
         public int Voorraad { get => _voorraad; set => _voorraad = value; }
         /// <summary>
-        /// Gets or sets the druk.
+        /// Get of set de druk.
         /// </summary>
         /// <value>
-        /// The druk.
+        /// de druk.
         /// </value>
         public string Druk { get => _druk; set => _druk = value; }
         /// <summary>
-        /// Gets or sets the boekenwinkelid.
+        /// Get of set de boekenwinkelid.
         /// </summary>
         /// <value>
-        /// The boekenwinkelid.
+        /// de boekenwinkelid.
         /// </value>
         public int Boekenwinkelid{ get => _boekenwinkelid; set => _boekenwinkelid = value; }
         #endregion
@@ -77,18 +77,18 @@ namespace BoekLibary
         /// <summary>
         /// Initializes a new instance of the <see cref="Boek"/> class.
         /// </summary>
-        /// <param name="titel">The titel.</param>
-        /// <param name="auteur">The auteur.</param>
-        /// <param name="taal">The taal.</param>
-        /// <param name="gewicht">The gewicht.</param>
-        /// <param name="prijs">The prijs.</param>
-        /// <param name="afmetingen">The afmetingen.</param>
-        /// <param name="isbn">The isbn.</param>
-        /// <param name="minimum">The minimum.</param>
-        /// <param name="maximaal">The maximaal.</param>
-        /// <param name="voorraad">The voorraad.</param>
-        /// <param name="druk">The druk.</param>
-        /// <param name="boekenwinkelid">The boekenwinkelid.</param>
+        /// <param name="titel">de titel.</param>
+        /// <param name="auteur">de auteur.</param>
+        /// <param name="taal">de taal.</param>
+        /// <param name="gewicht">het gewicht.</param>
+        /// <param name="prijs">de prijs.</param>
+        /// <param name="afmetingen">de afmetingen.</param>
+        /// <param name="isbn">het isbn.</param>
+        /// <param name="minimum">het minimum.</param>
+        /// <param name="maximaal">het maximaal.</param>
+        /// <param name="voorraad">de voorraad.</param>
+        /// <param name="druk">de druk.</param>
+        /// <param name="boekenwinkelid">de boekenwinkelid.</param>
         public Boek(string titel, string auteur, EnumTaal taal, int gewicht, double prijs, Afmeting afmetingen, long isbn, int minimum, int maximaal, int voorraad, string druk, int boekenwinkelid) : base(titel, auteur, taal, gewicht, prijs, afmetingen)
         {
             _isbn = isbn;

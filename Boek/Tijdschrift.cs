@@ -9,59 +9,59 @@ namespace BoekLibary
     {
         #region Variables
         /// <summary>
-        /// The uitgiftedag
+        /// de uitgiftedag
         /// </summary>
         private string _uitgiftedag;
         /// <summary>
-        /// The besteldag
+        /// de besteldag
         /// </summary>
         private string _besteldag;
         /// <summary>
-        /// The issn
+        /// het issn
         /// </summary>
         private long _issn;
         /// <summary>
-        /// The bestelaantal
+        /// het bestelaantal
         /// </summary>
         private int _bestelaantal;
         /// <summary>
-        /// The boekenwinkelid
+        /// de boekenwinkelid
         /// </summary>
         private int _boekenwinkelid;
 
         /// <summary>
-        /// Gets or sets the uitgiftedag.
+        /// Get of set de uitgiftedag.
         /// </summary>
         /// <value>
-        /// The uitgiftedag.
+        /// de uitgiftedag.
         /// </value>
         public string Uitgiftedag { get => _uitgiftedag; set => _uitgiftedag = value; }
         /// <summary>
-        /// Gets or sets the besteldag.
+        /// Get of set de besteldag.
         /// </summary>
         /// <value>
-        /// The besteldag.
+        /// de besteldag.
         /// </value>
         public string Besteldag { get => _besteldag; set => _besteldag = value; }
         /// <summary>
-        /// Gets or sets the issn.
+        /// Get of set het issn.
         /// </summary>
         /// <value>
-        /// The issn.
+        /// het issn.
         /// </value>
         public long ISSN { get => _issn; set => _issn = value; }
         /// <summary>
-        /// Gets or sets the bestelaantal.
+        /// Get of set het bestelaantal.
         /// </summary>
         /// <value>
-        /// The bestelaantal.
+        /// het bestelaantal.
         /// </value>
         public int Bestelaantal { get => _bestelaantal; set => _bestelaantal = value; }
         /// <summary>
-        /// Gets or sets the boekenwinkelid.
+        /// Get of set de boekenwinkelid.
         /// </summary>
         /// <value>
-        /// The boekenwinkelid.
+        /// de boekenwinkelid.
         /// </value>
         public int Boekenwinkelid { get => _boekenwinkelid; set => _boekenwinkelid = value; }
         #endregion
@@ -70,17 +70,17 @@ namespace BoekLibary
         /// <summary>
         /// Initializes a new instance of the <see cref="Tijdschrift"/> class.
         /// </summary>
-        /// <param name="titel">The titel.</param>
-        /// <param name="auteur">The auteur.</param>
-        /// <param name="taal">The taal.</param>
-        /// <param name="gewicht">The gewicht.</param>
-        /// <param name="prijs">The prijs.</param>
-        /// <param name="afmetingen">The afmetingen.</param>
-        /// <param name="uitgiftedag">The uitgiftedag.</param>
-        /// <param name="besteldag">The besteldag.</param>
-        /// <param name="issn">The issn.</param>
-        /// <param name="bestelaantal">The bestelaantal.</param>
-        /// <param name="boekenwinkelid">The boekenwinkelid.</param>
+        /// <param name="titel">de titel.</param>
+        /// <param name="auteur">de auteur.</param>
+        /// <param name="taal">de taal.</param>
+        /// <param name="gewicht">het gewicht.</param>
+        /// <param name="prijs">de prijs.</param>
+        /// <param name="afmetingen">de afmetingen.</param>
+        /// <param name="uitgiftedag">de  uitgiftedag.</param>
+        /// <param name="besteldag">de besteldag.</param>
+        /// <param name="issn">het issn.</param>
+        /// <param name="bestelaantal">het bestelaantal.</param>
+        /// <param name="boekenwinkelid">de boekenwinkelid.</param>
         public Tijdschrift(string titel, string auteur, EnumTaal taal, int gewicht, double prijs, Afmeting afmetingen, string uitgiftedag, string besteldag, long issn, int bestelaantal, int boekenwinkelid) : base(titel, auteur, taal, gewicht, prijs, afmetingen)
         {
             _uitgiftedag = uitgiftedag;

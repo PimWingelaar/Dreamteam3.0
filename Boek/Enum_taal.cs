@@ -6,19 +6,19 @@
     public enum EnumTaal
     {
         /// <summary>
-        /// The nederlands
+        /// Nederlands
         /// </summary>
         Nederlands = 0,
         /// <summary>
-        /// The engels
+        /// Engels
         /// </summary>
         Engels = 1,
         /// <summary>
-        /// The frans
+        /// Frans
         /// </summary>
         Frans = 2,
         /// <summary>
-        /// The duits
+        /// Duits
         /// </summary>
         Duits = 3
     }

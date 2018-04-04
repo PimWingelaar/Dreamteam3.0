@@ -5,34 +5,34 @@
     {
         #region Variables
         /// <summary>
-        /// The breedte
+        /// de breedte
         /// </summary>
         private int _breedte;
         /// <summary>
-        /// The hoogte
+        /// de hoogte
         /// </summary>
         private int _hoogte;
         /// <summary>
-        /// The lengte
+        /// de lengte
         /// </summary>
         private int _lengte;
 
         /// <summary>
-        /// Gets or sets the breedte.
+        /// get of set de breedte.
         /// </summary>
         /// <value>
-        /// The breedte.
+        /// de  breedte.
         /// </value>
         public int Breedte { get => _breedte; set => _breedte = value; }
         /// <summary>
-        /// Gets or sets the hoogte.
+        /// Gets of set de hoogte.
         /// </summary>
         /// <value>
-        /// The hoogte.
+        /// de hoogte.
         /// </value>
         public int Hoogte { get => _hoogte; set => _hoogte = value; }
         /// <summary>
-        /// Gets or sets the lengte.
+        /// Gets of set de lengte.
         /// </summary>
         /// <value>
         /// The lengte.
@@ -51,9 +51,9 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="Afmeting"/> class.
         /// </summary>
-        /// <param name="breedte">The breedte.</param>
-        /// <param name="hoogte">The hoogte.</param>
-        /// <param name="lengte">The lengte.</param>
+        /// <param name="breedte">de breedte.</param>
+        /// <param name="hoogte">de hoogte.</param>
+        /// <param name="lengte">de lengte.</param>
         public Afmeting(int breedte, int hoogte, int lengte)
         {
             _breedte = breedte;

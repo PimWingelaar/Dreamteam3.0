@@ -96,10 +96,14 @@ namespace BoekLibary
         {
             try
             {
-                var _afmeting = new Afmeting(_breedte, _hoogte, _lengte);
-                var _boek = new Boek(_titel, _auteur, _taal, _gewicht, _prijs, _afmeting, _isbn,
+                var afmeting = new Afmeting(_breedte, _hoogte, _lengte);
+                var objboek = new Boek(_titel, _auteur, _taal, _gewicht, _prijs, afmeting, _isbn,
                     _minimum, _maximaal, _aantalvoorraad, _druk, _boekenwinkelid);
-                Product.Boekenlijst.Add(_boek);
+                if (Product.Boekenlijst.Contains(objboek))
+                {
+                    Console.WriteLine("This book has already been added");
+                }
+                Product.Boekenlijst.Add(objboek);
             }
             catch
             {
@@ -115,6 +119,10 @@ namespace BoekLibary
         {
             try
             {
+                if (Product.Boekenlijst.Contains(_objboek))
+                {
+                    Console.WriteLine("This book has already been added");
+                }
                 Product.Boekenlijst.Add(_objboek);
             }
             catch (NullReferenceException)
@@ -160,9 +168,13 @@ namespace BoekLibary
             try
             {
                 var afmeting = new Afmeting(_breedte, _hoogte, _lengte);
-                var tijdschrijft = new Tijdschrift(_titel, _auteur, _taal, _gewicht, _prijs, afmeting, _uitgiftedag,
+                var objtijdschrift = new Tijdschrift(_titel, _auteur, _taal, _gewicht, _prijs, afmeting, _uitgiftedag,
                     _besteldag, _issn, _bestelaantal, _boekenwinkelid);
-                Product.Tijdschriftenlijst.Add(tijdschrijft);
+                if (Product.Tijdschriftenlijst.Contains(objtijdschrift))
+                {
+                    Console.WriteLine("This magazine has already been added");
+                }
+                Product.Tijdschriftenlijst.Add(objtijdschrift);
             }
             catch
             {
@@ -178,6 +190,10 @@ namespace BoekLibary
         {
             try
             {
+                if (Product.Tijdschriftenlijst.Contains(objtijdschrift))
+                {
+                    Console.WriteLine("This magazine has already been added");
+                }
                 Product.Tijdschriftenlijst.Add(objtijdschrift);
             }
             catch (NullReferenceException)

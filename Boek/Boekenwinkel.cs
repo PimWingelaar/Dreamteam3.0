@@ -8,15 +8,15 @@ namespace BoekLibary
 
         #region Variables
         /// <summary>
-        /// The boekenwinkelid
+        /// De boekenwinkelid
         /// </summary>
         private int _boekenwinkelid;
         /// <summary>
-        /// The contactgegevens
+        /// De contactgegevens
         /// </summary>
         private string _contactgegevens;
         /// <summary>
-        /// The openingstijden
+        /// De openingstijden
         /// </summary>
         private string _openingstijden;
         #endregion
@@ -43,10 +43,10 @@ namespace BoekLibary
         }
 
         /// <summary>
-        /// Verkoops the boek.
+        /// Verkoopt het boek.
         /// </summary>
-        /// <param name="isbn">The isbn.</param>
-        /// <param name="aantal">The aantal.</param>
+        /// <param name="isbn">Het isbn.</param>
+        /// <param name="aantal">het aantal.</param>
         public static void VerkoopBoek(long isbn, int aantal)
         {
             foreach (var boek in Product.Boekenlijst)
@@ -59,10 +59,10 @@ namespace BoekLibary
         }
 
         /// <summary>
-        /// Verkoops the tijdschrift.
+        /// Verkoopt het tijdschrift.
         /// </summary>
-        /// <param name="issn">The issn.</param>
-        /// <param name="aantal">The aantal.</param>
+        /// <param name="issn">de issn.</param>
+        /// <param name="aantal">het aantal.</param>
         public static void VerkoopTijdschrift(long issn, int aantal)
         {
             foreach (var tijdschrift in Product.Tijdschriftenlijst)
@@ -75,7 +75,7 @@ namespace BoekLibary
         }
 
         /// <summary>
-        /// Nieuws the boek.
+        /// Nieuw boek toevoegen.
         /// </summary>
         /// <param name="_titel">The titel.</param>
         /// <param name="_auteur">The auteur.</param>
@@ -108,9 +108,9 @@ namespace BoekLibary
         }
 
         /// <summary>
-        /// Nieuws the boek.
+        /// Nieuw boek toevoegen.
         /// </summary>
-        /// <param name="_objboek">The objboek.</param>
+        /// <param name="_objboek">het objboek.</param>
         public static void NieuwBoek(Boek _objboek)
         {
             try
@@ -124,7 +124,7 @@ namespace BoekLibary
         }
 
         /// <summary>
-        /// Verwijders the boek.
+        /// Verwijdert het boek.
         /// </summary>
         /// <param name="_objboek">The objboek.</param>
         public static void VerwijderBoek(Boek _objboek)
@@ -140,21 +140,21 @@ namespace BoekLibary
         }
 
         /// <summary>
-        /// Nieuws the tijdschrift.
+        /// Nieuw tijdschrift toevoegen.
         /// </summary>
-        /// <param name="_titel">The titel.</param>
-        /// <param name="_auteur">The auteur.</param>
-        /// <param name="_taal">The taal.</param>
-        /// <param name="_gewicht">The gewicht.</param>
-        /// <param name="_prijs">The prijs.</param>
-        /// <param name="_lengte">The lengte.</param>
-        /// <param name="_breedte">The breedte.</param>
-        /// <param name="_hoogte">The hoogte.</param>
-        /// <param name="_uitgiftedag">The uitgiftedag.</param>
-        /// <param name="_besteldag">The besteldag.</param>
-        /// <param name="_issn">The issn.</param>
-        /// <param name="_bestelaantal">The bestelaantal.</param>
-        /// <param name="_boekenwinkelid">The boekenwinkelid.</param>
+        /// <param name="_titel">de titel.</param>
+        /// <param name="_auteur">de auteur.</param>
+        /// <param name="_taal">de taal.</param>
+        /// <param name="_gewicht">het gewicht.</param>
+        /// <param name="_prijs">de prijs.</param>
+        /// <param name="_lengte">de lengte.</param>
+        /// <param name="_breedte">de breedte.</param>
+        /// <param name="_hoogte">de hoogte.</param>
+        /// <param name="_uitgiftedag">de uitgiftedag.</param>
+        /// <param name="_besteldag">de besteldag.</param>
+        /// <param name="_issn">het issn.</param>
+        /// <param name="_bestelaantal">het bestelaantal.</param>
+        /// <param name="_boekenwinkelid">de boekenwinkelid.</param>
         public static void NieuwTijdschrift(string _titel, string _auteur, Enum_taal _taal, int _gewicht, double _prijs, int _lengte, int _breedte, int _hoogte, string _uitgiftedag, string _besteldag, long _issn, int _bestelaantal,int _boekenwinkelid)
         {
             try
@@ -171,9 +171,9 @@ namespace BoekLibary
         }
 
         /// <summary>
-        /// Nieuws the tijdschrift.
+        /// Nieuw tijdschrift toevoegen.
         /// </summary>
-        /// <param name="objtijdschrift">The objtijdschrift.</param>
+        /// <param name="objtijdschrift">het objtijdschrift.</param>
         public static void NieuwTijdschrift(Tijdschrift objtijdschrift)
         {
             try
@@ -187,9 +187,9 @@ namespace BoekLibary
         }
 
         /// <summary>
-        /// Verwijders the tijdschrift.
+        /// Verwijdert het tijdschrift.
         /// </summary>
-        /// <param name="objtijdschrijft">The objtijdschrijft.</param>
+        /// <param name="objtijdschrijft">het objtijdschrijft.</param>
         public static void VerwijderTijdschrift(Tijdschrift objtijdschrijft)
         {
             if (Product.Tijdschriftenlijst.Contains(objtijdschrijft))
@@ -203,7 +203,7 @@ namespace BoekLibary
         }
 
         /// <summary>
-        /// Toons the alle tijdschriften.
+        /// Laat alle tijdschriften zien.
         /// </summary>
         /// <returns></returns>
         public static string ToonAlleTijdschriften()
@@ -220,7 +220,7 @@ namespace BoekLibary
         }
 
         /// <summary>
-        /// Toons the alle boeken.
+        /// Laat alle boeken zien.
         /// </summary>
         /// <returns></returns>
         public static string ToonAlleBoeken()

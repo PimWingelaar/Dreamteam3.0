@@ -91,7 +91,7 @@ namespace BoekLibary
         /// <param name="_aantalvoorraad">de aantalvoorraad.</param>
         /// <param name="_druk">de druk.</param>
         /// <param name="_boekenwinkelid">de boekenwinkelid.</param>
-        public static void NieuwBoek(string _titel, string _auteur, Enum_taal _taal, int _gewicht, double _prijs, int _lengte,
+        public static void NieuwBoek(string _titel, string _auteur, EnumTaal _taal, int _gewicht, double _prijs, int _lengte,
             int _hoogte, int _breedte, long _isbn, int _minimum, int _maximaal, int _aantalvoorraad, string _druk, int _boekenwinkelid)
         {
             try
@@ -155,7 +155,7 @@ namespace BoekLibary
         /// <param name="_issn">het issn.</param>
         /// <param name="_bestelaantal">het bestelaantal.</param>
         /// <param name="_boekenwinkelid">de boekenwinkelid.</param>
-        public static void NieuwTijdschrift(string _titel, string _auteur, Enum_taal _taal, int _gewicht, double _prijs, int _lengte, int _breedte, int _hoogte, string _uitgiftedag, string _besteldag, long _issn, int _bestelaantal,int _boekenwinkelid)
+        public static void NieuwTijdschrift(string _titel, string _auteur, EnumTaal _taal, int _gewicht, double _prijs, int _lengte, int _breedte, int _hoogte, string _uitgiftedag, string _besteldag, long _issn, int _bestelaantal,int _boekenwinkelid)
         {
             try
             {
@@ -211,7 +211,7 @@ namespace BoekLibary
             var i = 0;
             foreach (var tijdschrift in Product.Tijdschriftenlijst)
             {
-                var tijdschrijftstring = tijdschrift.Afdrukken();
+                var tijdschrijftstring = tijdschrift.ToString();
                 Console.WriteLine(tijdschrijftstring);
                 i++;
             }
@@ -228,7 +228,7 @@ namespace BoekLibary
             var i = 0;
             foreach (var boek in Product.Boekenlijst)
             {
-                var boekstring = boek.Afdrukken();
+                var boekstring = boek.ToString();
                 Console.WriteLine(boekstring);
                 i++;
             }

@@ -8,6 +8,8 @@ namespace BoekenWinkel
     {
         static void Main(string[] args)
         {
+            var boekenwinkel = new Boekenwinkel(1, "Tel - 0612923821 | Email - test@boekenwinkel.nl  | Adres - Testlaan 1 Arnhem", "8:00 - 16:00");
+
             var quit = false;
             Console.WriteLine("F2 TestMethode | F3 AddBook | F4 Stop");
             while (!quit)
@@ -32,9 +34,6 @@ namespace BoekenWinkel
         public static void TestMethode()
         {
             var testAfmeting = new Afmeting(5, 5, 5);
-
-            var boekenwinkel = new Boekenwinkel(1, "Tel - 0612923821 | Email - test@boekenwinkel.nl  | Adres - Testlaan 1 Arnhem", "8:00 - 16:00");
-
             var testBoek = new Boek("harry_potter_and_the_philospher_stone", "j.k.rowling", EnumTaal.Engels, 290, 12.49, testAfmeting, 1408855928, 20, 50, 34, "1", 1);
             var testBoek2 = new Boek("harry_potter_and_the_goblet_of_fire", "j.k.rowling", EnumTaal.Engels, 300, 14.99, testAfmeting, 1456715498, 20, 50, 24, "1", 1);
             var testBoek3 = new Boek("harry_potter_and_the_prisoner_of_azkaban", "j.k.rowling", EnumTaal.Engels, 280, 15.00, testAfmeting, 2549738946, 20, 50, 44, "1", 1);
@@ -45,8 +44,6 @@ namespace BoekenWinkel
             var testtijdschrift = new Tijdschrift("donald_duck", "walt disney", EnumTaal.Nederlands, 140, 4.99, testAfmeting, "16-02-2018", "20-02-2018", 54987618, 200, 1);
             var testtijdschrift2 = new Tijdschrift("vtwonen", "ruben gijsbert", EnumTaal.Nederlands, 145, 5.50, testAfmeting, "17-02-2018", "18-02-2018", 98654879, 250, 1);
             var testtijdschrift3 = new Tijdschrift("autoweek", "frits huizen", EnumTaal.Nederlands, 135, 4.50, testAfmeting, "15-02-2018", "16-02-2018", 46987614, 240, 1);
-
-            Console.WriteLine(boekenwinkel.ToString());
 
             Boekenwinkel.NieuwBoek(testBoek);
             Boekenwinkel.NieuwBoek(testBoek2);
@@ -71,7 +68,10 @@ namespace BoekenWinkel
             Boekenwinkel.NieuwTijdschrift(testtijdschrift3);
             test = Boekenwinkel.ToonAlleTijdschriften();
 
-            Console.ReadLine();
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("F2 TestMethode | F3 AddBook | F4 Stop");
         }
 
         public static void BoekToevoegen()
@@ -82,11 +82,12 @@ namespace BoekenWinkel
             try
             {
                 Console.Clear();
-                Console.WriteLine("Wat is de titel");
+                Console.WriteLine("Wat is de titel van het boek");
                 titel = Console.ReadLine();
-                Console.WriteLine("Wat is de acteur");
+                Console.WriteLine("Wat is de acteur van het boek");
                 string acteur = Console.ReadLine();
-                Console.WriteLine("Wat is de taal");
+                Console.WriteLine("Wat is de taal van het boek");
+                Console.WriteLine("");
                 Console.WriteLine("0 = Nederlands");
                 Console.WriteLine("1 = Engels");
                 Console.WriteLine("2 = Frans");
@@ -101,26 +102,25 @@ namespace BoekenWinkel
                     taal = EnumTaal.Frans;
                 if (key.Key == ConsoleKey.NumPad3)
                     taal = EnumTaal.Duits;
-                Console.WriteLine("");
-                Console.WriteLine("Wat is de gewicht");
+                Console.WriteLine("Wat is de gewicht van het boek");
                 int gewicht = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Wat is de prijs");
+                Console.WriteLine("Wat is de prijs van het boek");
                 double prijs = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Wat is de lengte");
+                Console.WriteLine("Wat is de lengte van het boek");
                 int lengte = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Wat is de breedte");
+                Console.WriteLine("Wat is de breedte van het boek");
                 int breedte = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Wat is de hoogte");
+                Console.WriteLine("Wat is de hoogte van het boek");
                 int hoogte = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Wat is de ISBN");
+                Console.WriteLine("Wat is de ISBN van het boek");
                 long isbn = Convert.ToInt64(Console.ReadLine());
-                Console.WriteLine("Wat is de minimaal");
+                Console.WriteLine("Wat is de minimaal aantel boeken");
                 int minimaal = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Wat is de maximaal");
+                Console.WriteLine("Wat is de maximaal aantal boeken");
                 int maximaal = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Wat is de voorraad");
+                Console.WriteLine("Hoeveel boeken kan je toevoegen");
                 int voorraad = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Wat is de druk");
+                Console.WriteLine("Wat is de druk van het boek");
                 string druk = Console.ReadLine();
                 Console.WriteLine("Wat is de boekenwinkel");
                 boekenwinkel = Convert.ToInt32(Console.ReadLine());
